@@ -1,0 +1,15 @@
+﻿<Application xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+				 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+				 xmlns:Demo="clr-namespace:Demo" 
+				 x:Class="Demo.App">
+	<Application.Resources>
+		<ResourceDictionary>
+			<ResourceDictionary.MergedDictionaries>
+				<ResourceDictionary Source="Assets/Styles.xaml"/>
+				<ResourceDictionary Source="Assets/CoreStyles.xaml"/>
+				<ResourceDictionary Source="Assets/ToggleSwitchStyles.xaml"/>
+			</ResourceDictionary.MergedDictionaries>
+			<Demo:DemoViewModel x:Key="DemoViewModel"/>
+		</ResourceDictionary>
+	</Application.Resources>
+</Application>

@@ -1,0 +1,168 @@
+﻿<ResourceDictionary
+     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+     xmlns:Controls="clr-namespace:Demo.Controls">
+
+    <!-- Global Settings-->
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="Brushes.xaml"/>
+        <ResourceDictionary Source="Fonts.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+
+    <!--TextBlock Style-->
+    <Style TargetType="TextBlock" x:Key="DefaultTextBlockStyle">
+        <Setter Property="Foreground" Value="{StaticResource TextBrush}"/>
+        <Setter Property="FontFamily" Value="{StaticResource ContentFontFamily}"/>
+        <Setter Property="FontSize" Value="{StaticResource ContentFontSize}"/>
+    </Style>
+
+    <!--HorizontalTrackLargeDecrease-->
+    <ControlTemplate x:Key="HorizontalTrackLargeDecrease" TargetType="RepeatButton">
+        <Grid x:Name="Root" Margin="0,-1,0,0">
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal"/>
+                    <VisualState x:Name="MouseOver"/>
+                    <VisualState x:Name="Pressed"/>
+                    <VisualState x:Name="Disabled"/>
+                </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+            <Rectangle Height="3" Margin="0,1,0,0"/>
+        </Grid>
+    </ControlTemplate>
+
+    <!--Slider Style-->
+    <Style TargetType="Slider" x:Key="DefaultSliderStyle">
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="Maximum" Value="10"/>
+        <Setter Property="Minimum" Value="0"/>
+        <Setter Property="Value" Value="0"/>
+        <Setter Property="BorderBrush" Value="#FFCCCCCC"/>
+        <Setter Property="IsTabStop" Value="False"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Slider">
+                    <Grid x:Name="Root">
+                        <Grid.Resources>
+                            <ControlTemplate x:Key="RepeatButtonTemplate">
+                                <Grid x:Name="Root" Opacity="0"/>
+                            </ControlTemplate>
+                        </Grid.Resources>
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Normal"/>
+                                <VisualState x:Name="MouseOver"/>
+                                <VisualState x:Name="Disabled">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Duration="0" Storyboard.TargetProperty="Visibility" Storyboard.TargetName="HorizontalTrackRectangleDisabledOverlay">
+                                            <DiscreteObjectKeyFrame KeyTime="0">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <Visibility>Visible</Visibility>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Duration="0" Storyboard.TargetProperty="Visibility" Storyboard.TargetName="ThumbDisabledOverlay">
+                                            <DiscreteObjectKeyFrame KeyTime="0">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <Visibility>Visible</Visibility>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="HorizontalTrackRectangleDisabledOverlay_Copy">
+                                            <DiscreteObjectKeyFrame KeyTime="0">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <Visibility>Visible</Visibility>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                            </VisualStateGroup>
+                            <VisualStateGroup x:Name="FocusStates">
+                                <VisualState x:Name="Unfocused"/>
+                                <VisualState x:Name="Focused"/>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                        <Grid x:Name="HorizontalTemplate" Background="{TemplateBinding Background}">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Rectangle x:Name="TrackRectangle" Grid.ColumnSpan="3" Grid.Column="0" Height="3" Margin="5,0" StrokeThickness="{TemplateBinding BorderThickness}" Fill="{StaticResource SliderTrackBrush}"/>
+                            <Rectangle x:Name="HorizontalTrackRectangleDisabledOverlay" Grid.ColumnSpan="3" Grid.Column="0" Fill="{StaticResource DisabledWhiteColorBrush}" Height="3" Margin="5,0,5,0" Opacity=".55" Visibility="Collapsed"/>
+                            <RepeatButton x:Name="HorizontalTrackLargeChangeDecreaseRepeatButton" Grid.Column="0" Height="18" IsTabStop="False" Template="{StaticResource HorizontalTrackLargeDecrease}" Foreground="#FFE9E9E9"/>
+                            <Rectangle x:Name="HorizontalTrackRectangleDisabledOverlay_Copy" Grid.ColumnSpan="1" Fill="{StaticResource DisabledWhiteColorBrush}" Height="4" Opacity="0.7" Visibility="Collapsed" />
+                            <Thumb x:Name="HorizontalThumb" Grid.Column="1" Height="16" IsTabStop="True" Width="8" Cursor="Hand" BorderBrush="{StaticResource SliderTrackBrush}"/>
+                            <TextBlock Grid.Column="1" Grid.Row="1" Text="{Binding Value, RelativeSource={RelativeSource TemplatedParent}, StringFormat=\{0:N1\}}" VerticalAlignment="Top" Foreground="{StaticResource BodyTextColorBrush}" Margin="-5,-11" Padding="0,11,0,0" IsHitTestVisible="False"/>
+                            <Rectangle x:Name="ThumbDisabledOverlay" Grid.Column="1" Fill="{StaticResource DisabledWhiteColorBrush}" Opacity="0.25" Visibility="Collapsed" Width="4" Height="10"/>
+                            <RepeatButton x:Name="HorizontalTrackLargeChangeIncreaseRepeatButton" Grid.Column="2" Height="18" IsTabStop="False" Template="{StaticResource RepeatButtonTemplate}"/>
+                        </Grid>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Foreground" Value="{StaticResource TextBrush}"/>
+    </Style>
+
+    <!--CheckBox Style-->
+    <Style TargetType="CheckBox" x:Key="DefaultCheckBoxStyle">
+        <Setter Property="FontFamily" Value="{StaticResource ContentFontFamily}"/>
+        <Setter Property="Foreground" Value="{StaticResource BodyTextColorBrush}"/>
+        <Setter Property="FontSize" Value="{StaticResource ContentFontSize}"/>
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+        <Setter Property="HorizontalContentAlignment" Value="Left"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Padding" Value="4,0,0,0"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="BorderBrush" Value="#FF7F7F7F"/>
+        <Setter Property="Background">
+            <Setter.Value>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFE5E5E5" Offset="0"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="Controls:DropShadowTextBlock">
+        <Setter Property="Text" Value="DropShadowTextBlock" />
+        <Setter Property="DropShadowColor" Value="Black" />
+        <Setter Property="DropShadowOpacity" Value="0.5" />
+        <Setter Property="DropShadowAngle" Value="45" />
+        <Setter Property="DropShadowDistance" Value="2" />
+        <Setter Property="Foreground" Value="Black" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Controls:DropShadowTextBlock">
+                    <Grid Background="{TemplateBinding Background}">
+                        <TextBlock Text="{TemplateBinding Text}"
+                                              TextDecorations="{TemplateBinding TextDecorations}"
+                                              TextWrapping="{TemplateBinding TextWrapping}"
+                                              IsHitTestVisible="False">
+                                     <TextBlock.Foreground>
+                                          <SolidColorBrush x:Name="PART_DropShadowBrush" />
+                                     </TextBlock.Foreground>
+                                     <TextBlock.RenderTransform>
+                                          <TranslateTransform X="2" Y="2" x:Name="PART_DropShadowTranslate" />
+                                     </TextBlock.RenderTransform>
+                        </TextBlock>
+                        <TextBlock Text="{TemplateBinding Text}"
+                                      TextDecorations="{TemplateBinding TextDecorations}"
+                                      TextWrapping="{TemplateBinding TextWrapping}"/>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- Implicit Styles -->
+    <Style TargetType="TextBlock" BasedOn="{StaticResource DefaultTextBlockStyle}" />
+    <Style TargetType="CheckBox" BasedOn="{StaticResource DefaultCheckBoxStyle}" />
+    <Style TargetType="Slider" BasedOn="{StaticResource DefaultSliderStyle}" />
+</ResourceDictionary>

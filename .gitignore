@@ -4,3 +4,8 @@ obj
 
 # mstest test results
 TestResults
+
+# user files
+*.user
+*.suo
+*ReSharper.*

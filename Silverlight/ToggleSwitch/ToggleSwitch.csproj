@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{750868B6-9930-4E00-80BB-AE97487ED24A}</ProjectGuid>
+    <ProjectTypeGuids>{A1591282-1198-4647-A2B1-27E5FF5F6F3B};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ToggleSwitch</RootNamespace>
+    <AssemblyName>ToggleSwitch</AssemblyName>
+    <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <SilverlightApplication>false</SilverlightApplication>
+    <ValidateXaml>true</ValidateXaml>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+  </PropertyGroup>
+  <!-- This property group is only here to support building this project using the 
+       MSBuild 3.5 toolset. In order to work correctly with this older toolset, it needs 
+       to set the TargetFrameworkVersion to v3.5 -->
+  <PropertyGroup Condition="'$(MSBuildToolsVersion)' == '3.5'">
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release\</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <DocumentationFile>Bin\Release\ToggleSwitch.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>ToggleSwitchKey.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib" />
+    <Reference Include="System.Windows" />
+    <Reference Include="system" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\Common\Borders\ClippingBorder.cs">
+      <Link>Borders\ClippingBorder.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Common\Borders\InnerGlowBorder.cs">
+      <Link>Borders\InnerGlowBorder.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Common\Borders\OuterGlowBorder.cs">
+      <Link>Borders\OuterGlowBorder.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Common\HorizontalToggleSwitch.cs">
+      <Link>HorizontalToggleSwitch.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Common\ToggleSwitchBase.cs">
+      <Link>ToggleSwitchBase.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Common\Utils\ActualSizePropertyProxy.cs">
+      <Link>Utils\ActualSizePropertyProxy.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Common\Utils\HelperExtensions.cs">
+      <Link>Utils\HelperExtensions.cs</Link>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Themes\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ToggleSwitchKey.snk" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="..\..\Common\Icons\ToggleSwitch.HorizontalToggleSwitch.Expression.Large.png">
+      <Link>Icons\ToggleSwitch.HorizontalToggleSwitch.Expression.Large.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\..\Common\Icons\ToggleSwitch.HorizontalToggleSwitch.Expression.Small.png">
+      <Link>Icons\ToggleSwitch.HorizontalToggleSwitch.Expression.Small.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\..\Common\Icons\ToggleSwitch.HorizontalToggleSwitch.VisualStudio.bmp">
+      <Link>Icons\ToggleSwitch.HorizontalToggleSwitch.VisualStudio.bmp</Link>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{A1591282-1198-4647-A2B1-27E5FF5F6F3B}">
+        <SilverlightProjectProperties />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
