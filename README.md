@@ -2,9 +2,7 @@ Toggle Switch Control Library
 =====================
 Use the Toggle Switch Control Library to create highly customizable toggle switch controls in WPF and Silverlight apps.
 
-Available on Nuget: http://nuget.org/List/Packages/ToggleSwitch
-
-and on the Expression Gallery: http://gallery.expression.microsoft.com/ToggleSwitchControl
+Available as a Nuget package: http://nuget.org/List/Packages/ToggleSwitch
 
 [![View Demo][2]][1]
 
