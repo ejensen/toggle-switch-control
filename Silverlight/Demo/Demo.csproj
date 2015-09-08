@@ -193,5 +193,4 @@
       </FlavorProperties>
     </VisualStudio>
   </ProjectExtensions>
-  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Expression\Blend\Silverlight\v4.0\Microsoft.Expression.Blend.Silverlight.targets" />
 </Project>

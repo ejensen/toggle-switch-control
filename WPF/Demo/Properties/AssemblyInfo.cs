@@ -12,7 +12,7 @@ using System.Windows;
 [assembly: AssemblyConfiguration( "" )]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("Toggle Switch Demo")]
-[assembly: AssemblyCopyright("Copyright © Eric Jensen 2013")]
+[assembly: AssemblyCopyright("Copyright © Eric Jensen 2015")]
 [assembly: AssemblyTrademark( "" )]
 [assembly: AssemblyCulture( "" )]
 
@@ -51,6 +51,6 @@ using System.Windows;
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.1.1.0")]
-[assembly: AssemblyFileVersion("1.1.1.0")]
+[assembly: AssemblyVersion("1.1.2.0")]
+[assembly: AssemblyFileVersion("1.1.2.0")]
 [assembly: NeutralResourcesLanguageAttribute("en")]

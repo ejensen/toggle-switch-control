@@ -11,7 +11,7 @@ using System.Resources;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("Toggle Switch Control Library")]
-[assembly: AssemblyCopyright("Copyright © Eric Jensen 2013")]
+[assembly: AssemblyCopyright("Copyright © Eric Jensen 2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -32,7 +32,7 @@ using System.Resources;
 //
 // You can specify all the values or you can default the Revision and Build Numbers 
 // by using the '*' as shown below:
-[assembly: AssemblyVersion("1.1.1")]
-[assembly: AssemblyFileVersion("1.1.1")]
+[assembly: AssemblyVersion("1.1.2")]
+[assembly: AssemblyFileVersion("1.1.2")]
 [assembly: NeutralResourcesLanguageAttribute("en")]
 [assembly: CLSCompliant(true)]

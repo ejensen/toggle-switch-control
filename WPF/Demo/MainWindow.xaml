@@ -4,7 +4,7 @@
         xmlns:Demo="clr-namespace:Demo"
         Title="Toggle Switch Demo - WPF" 
         Height="380" 
-         Width="620" 
+        Width="640" 
         DataContext="{StaticResource DemoViewModel}"
         ResizeMode="NoResize" 
         Background="#FFFAFAFA">

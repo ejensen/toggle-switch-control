@@ -648,15 +648,19 @@ namespace ToggleSwitch
 		/// </summary>
 		protected void OnClick()
 		{
-			IsChecked = !IsChecked;
-		}
+#if SILVERLIGHT
+            IsChecked = !IsChecked;
+#else
+            SetCurrentValue(IsCheckedProperty, !IsChecked);
+#endif
+        }
 
-		/// <summary>
-		/// Raised when the size of the control has changed.
-		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
-		protected virtual void OnSizeChanged(object sender, SizeChangedEventArgs e)
+        /// <summary>
+        /// Raised when the size of the control has changed.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        protected virtual void OnSizeChanged(object sender, SizeChangedEventArgs e)
 		{
 			LayoutControls();
 		}
@@ -705,7 +709,7 @@ namespace ToggleSwitch
 			if (!IsEnabled)
 			{
 				IsPressed = false;
-#if  SILVERLIGHT
+#if SILVERLIGHT
 				IsMouseOver = false;
 #endif
 				_isMouseCaptured = false;
