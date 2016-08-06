@@ -115,6 +115,7 @@
     <Compile Include="..\..\Common\VerticalToggleSwitch.cs">
       <Link>Controls\VerticalToggleSwitch.cs</Link>
     </Compile>
+    <Compile Include="Controls\RelayCommand.cs" />
     <Compile Include="DemoViewModel.cs" />
     <Compile Include="Views\Basics.xaml.cs">
       <DependentUpon>Basics.xaml</DependentUpon>
