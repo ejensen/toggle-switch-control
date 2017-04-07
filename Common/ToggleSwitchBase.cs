@@ -454,7 +454,7 @@ namespace ToggleSwitch
 #if SILVERLIGHT
 			new PropertyMetadata(false, OnIsCheckedChanged));
 #else
-			new FrameworkPropertyMetadata(false, FrameworkPropertyMetadataOptions.AffectsArrange, OnIsCheckedChanged));
+			new FrameworkPropertyMetadata(false, FrameworkPropertyMetadataOptions.AffectsArrange | FrameworkPropertyMetadataOptions.BindsTwoWayByDefault, OnIsCheckedChanged));
 #endif
 
 		///<summary>
