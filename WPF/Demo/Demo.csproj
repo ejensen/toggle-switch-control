@@ -31,4 +31,20 @@
     </Compile>
   </ItemGroup>
 
+  <ItemGroup>
+    <BlendEmbeddedFont Include="Fonts\HelveticaNeueLTCom-LtCn.ttf">
+      <IsSystemFont>True</IsSystemFont>
+      <All>False</All>
+      <AutoFill>False</AutoFill>
+      <Characters>
+      </Characters>
+      <Uppercase>True</Uppercase>
+      <Lowercase>False</Lowercase>
+      <Numbers>False</Numbers>
+      <Punctuation>False</Punctuation>
+    </BlendEmbeddedFont>
+    <Resource Include="Images\Knob.png" />
+    <Resource Include="Images\lightOff.png" />
+    <Resource Include="Images\lightOn.png" />
+  </ItemGroup>
 </Project>
