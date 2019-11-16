@@ -7,5 +7,6 @@ The Toggle Switch Control Library creates highly customizable toggle switch cont
 Available as a [NuGet package](https://www.nuget.org/packages/ToggleSwitch).
 
 [![View Demo][2]][1]
+
   [1]: https://yetilabs.org/toggleswitch
   [2]: https://yetilabs.org/toggleswitch/demo.jpg (View Demo)
