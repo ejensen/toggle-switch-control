@@ -2,15 +2,21 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFrameworks>net45;netcoreapp3.0</TargetFrameworks>
+    <TargetFrameworks>netcoreapp3.1</TargetFrameworks>
     <UseWPF>true</UseWPF>
   </PropertyGroup>
   <PropertyGroup>
     <AssemblyTitle>Toggle Switch Demo</AssemblyTitle>
     <Product>Toggle Switch Demo</Product>
-    <Copyright>Copyright © Eric Jensen 2015</Copyright>
-    <AssemblyVersion>1.1.2.0</AssemblyVersion>
-    <FileVersion>1.1.2.0</FileVersion>
+    <Copyright>Copyright © Eric Jensen 2020</Copyright>
+    <AssemblyVersion>1.2.0.0</AssemblyVersion>
+    <FileVersion>1.2.0.0</FileVersion>
+    <PackageProjectUrl>https://github.com/ejensen/toggle-switch-control</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/ejensen/toggle-switch-control</RepositoryUrl>
+    <Authors>Eric Jensen</Authors>
+    <Company>Yeti Labs</Company>
+    <StartupObject>Demo.App</StartupObject>
+    <Version>1.2.0</Version>
   </PropertyGroup>
 
   <ItemGroup>
@@ -32,17 +38,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <BlendEmbeddedFont Include="Fonts\HelveticaNeueLTCom-LtCn.ttf">
-      <IsSystemFont>True</IsSystemFont>
-      <All>False</All>
-      <AutoFill>False</AutoFill>
-      <Characters>
-      </Characters>
-      <Uppercase>True</Uppercase>
-      <Lowercase>False</Lowercase>
-      <Numbers>False</Numbers>
-      <Punctuation>False</Punctuation>
-    </BlendEmbeddedFont>
     <Resource Include="Images\Knob.png" />
     <Resource Include="Images\lightOff.png" />
     <Resource Include="Images\lightOn.png" />

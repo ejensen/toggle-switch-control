@@ -2,11 +2,11 @@ using System.Windows.Controls;
 
 namespace Demo
 {
-	public partial class Events : UserControl
-	{
-		public Events()
-		{
-			InitializeComponent();
-		}
-	}
+    public partial class Events : UserControl
+    {
+        public Events()
+        {
+            InitializeComponent();
+        }
+    }
 }

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Reflection;
-using System.Runtime.InteropServices;
 using System.Resources;
+using System.Runtime.InteropServices;
 using System.Windows;
 
 // General Information about an assembly is controlled through the following 
@@ -17,7 +17,7 @@ using System.Windows;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid( "528c2286-1b0e-4419-972a-b28dd5a33232" )]
+[assembly: Guid("528c2286-1b0e-4419-972a-b28dd5a33232")]
 
 [assembly: NeutralResourcesLanguageAttribute("en")]
 [assembly: CLSCompliant(true)]

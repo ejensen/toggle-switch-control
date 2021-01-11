@@ -1,15 +1,22 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
   <PropertyGroup>
     <OutputType>Library</OutputType>
-    <TargetFrameworks>net45;netcoreapp3.0</TargetFrameworks>
+    <TargetFrameworks>net46;netcoreapp3.1</TargetFrameworks>
     <UseWPF>true</UseWPF>
   </PropertyGroup>
   <PropertyGroup>
     <AssemblyTitle>Toggle Switch Control Library</AssemblyTitle>
     <Product>Toggle Switch Control Library</Product>
-    <Copyright>Copyright © Eric Jensen 2015</Copyright>
-    <AssemblyVersion>1.1.2.0</AssemblyVersion>
-    <FileVersion>1.1.2.0</FileVersion>
+    <Copyright>Copyright © Eric Jensen 2020</Copyright>
+    <AssemblyVersion>1.2.0.0</AssemblyVersion>
+    <FileVersion>1.2.0.0</FileVersion>
+    <EnableNETAnalyzers>true</EnableNETAnalyzers>
+    <PackageProjectUrl>https://github.com/ejensen/toggle-switch-control</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/ejensen/toggle-switch-control</RepositoryUrl>
+    <Company>Yeti Labs</Company>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Authors>Eric Jensen</Authors>
+    <Version>1.2.0</Version>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="..\..\Common\Borders\ClippingBorder.cs">

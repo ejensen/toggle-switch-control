@@ -24,16 +24,12 @@ namespace Demo.Controls
         /// <summary>
         /// The drop shadow color property.
         /// </summary>
-        public static readonly DependencyProperty DropShadowColorProperty = DependencyProperty.Register("DropShadowColor", typeof(Color),
-                                                                                                                                          typeof(DropShadowTextBlock),
-                                                                                                                                          new PropertyMetadata(DropShadowColorChanged));
+        public static readonly DependencyProperty DropShadowColorProperty = DependencyProperty.Register("DropShadowColor", typeof(Color), typeof(DropShadowTextBlock), new PropertyMetadata(DropShadowColorChanged));
 
         /// <summary>
         /// The drop shadow opacity property.
         /// </summary>
-        public static readonly DependencyProperty DropShadowOpacityProperty = DependencyProperty.Register("DropShadowOpacity", typeof(double),
-                                                                                                                                            typeof(DropShadowTextBlock),
-                                                                                                                                            new PropertyMetadata(DropShadowOpacityChanged));
+        public static readonly DependencyProperty DropShadowOpacityProperty = DependencyProperty.Register("DropShadowOpacity", typeof(double), typeof(DropShadowTextBlock), new PropertyMetadata(DropShadowOpacityChanged));
 
         /// <summary>
         /// The text property.
@@ -43,28 +39,22 @@ namespace Demo.Controls
         /// <summary>
         /// The text decorations property.
         /// </summary>
-        public static readonly DependencyProperty TextDecorationsProperty = DependencyProperty.Register("TextDecorations", typeof(TextDecorationCollection),
-                                                                                                                                          typeof(DropShadowTextBlock), null);
+        public static readonly DependencyProperty TextDecorationsProperty = DependencyProperty.Register("TextDecorations", typeof(TextDecorationCollection), typeof(DropShadowTextBlock), null);
 
         /// <summary>
         /// The text wrapping property.
         /// </summary>
-        public static readonly DependencyProperty TextWrappingProperty = DependencyProperty.Register("TextWrapping", typeof(TextWrapping),
-                                                                                                                                      typeof(DropShadowTextBlock), null);
+        public static readonly DependencyProperty TextWrappingProperty = DependencyProperty.Register("TextWrapping", typeof(TextWrapping), typeof(DropShadowTextBlock), null);
 
         /// <summary>
         /// The drop shadow distance property.
         /// </summary>
-        public static readonly DependencyProperty DropShadowDistanceProperty = DependencyProperty.Register("DropShadowDistance", typeof(double),
-                                                                                                                                              typeof(DropShadowTextBlock),
-                                                                                                                                              new PropertyMetadata(DropShadowDistanceChanged));
+        public static readonly DependencyProperty DropShadowDistanceProperty = DependencyProperty.Register("DropShadowDistance", typeof(double), typeof(DropShadowTextBlock), new PropertyMetadata(DropShadowDistanceChanged));
 
         /// <summary>
         /// The drop shadow angle property.
         /// </summary>
-        public static readonly DependencyProperty DropShadowAngleProperty = DependencyProperty.Register("DropShadowAngle", typeof(double),
-                                                                                                                                          typeof(DropShadowTextBlock),
-                                                                                                                                          new PropertyMetadata(DropShadowAngleChanged));
+        public static readonly DependencyProperty DropShadowAngleProperty = DependencyProperty.Register("DropShadowAngle", typeof(double), typeof(DropShadowTextBlock), new PropertyMetadata(DropShadowAngleChanged));
 
         /// <summary>
         /// Stores the drop shadow brush.
