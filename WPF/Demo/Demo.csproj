@@ -17,6 +17,8 @@
     <Company>Yeti Labs</Company>
     <StartupObject>Demo.App</StartupObject>
     <Version>1.2.0</Version>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <RepositoryType>git</RepositoryType>
   </PropertyGroup>
 
   <ItemGroup>

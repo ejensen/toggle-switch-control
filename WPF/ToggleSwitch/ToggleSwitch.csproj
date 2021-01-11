@@ -17,6 +17,9 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Authors>Eric Jensen</Authors>
     <Version>1.2.0</Version>
+    <PackageIcon>icon.png</PackageIcon>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <RepositoryType>git</RepositoryType>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="..\..\Common\Borders\ClippingBorder.cs">
@@ -45,5 +48,11 @@
     <EmbeddedResource Include="..\..\Common\Icons\ToggleSwitch.HorizontalToggleSwitch.Expression.Large.png" Link="Icons\ToggleSwitch.HorizontalToggleSwitch.Expression.Large.png" />
     <EmbeddedResource Include="..\..\Common\Icons\ToggleSwitch.HorizontalToggleSwitch.Expression.Small.png" Link="Icons\ToggleSwitch.HorizontalToggleSwitch.Expression.Small.png" />
     <EmbeddedResource Include="..\..\Common\Icons\ToggleSwitch.HorizontalToggleSwitch.VisualStudio.bmp" Link="Icons\ToggleSwitch.HorizontalToggleSwitch.VisualStudio.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\icon.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
 </Project>
